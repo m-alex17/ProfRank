@@ -17,51 +17,51 @@ Settings are stored in your browser only (localStorage). The only network reques
 
 > All screenshots and the video use **simulated data with fictional people**, because they were produced without calling OpenAlex. Your results will show real researchers.
 
-![Full walkthrough](docs/demo.gif)
+![ProfRank full walkthrough](demo.gif)
 
-The same walkthrough as a smaller video: [docs/demo.mp4](docs/demo.mp4).
+Prefer video? [Watch or download the MP4 demo](demo.mp4).
 
 **1. Start.** Open `index.html`. The page has three steps: choose where to look, describe your interests, run.
 
-![Landing page](docs/screenshots/01_landing.png)
+![Landing page](01_landing.png)
 
 **2. Pick a country.** Click the country box and type to search. The list is alphabetical and European countries carry a tag. Click a name, or press Enter.
 
-![Country search](docs/screenshots/02_country_search.png)
+![Country search](02_country_search.png)
 
 **3. Add your API key and basic settings.** Paste your free OpenAlex key (it is stored in your browser only). Set the start year, how many universities to feature, the minimum score and, optionally, a research field.
 
-![Settings](docs/screenshots/03_settings.png)
+![Settings](03_settings.png)
 
 **4. Advanced options (optional).** Minimum matching papers, researchers per university, author-order handling, favoured venues, research institutes.
 
-![Advanced options](docs/screenshots/04_advanced.png)
+![Advanced options](04_advanced.png)
 
 **5. Describe your interests.** Load one of the built-in examples or write your own topics. Each topic has a weight (how much it matters) and one keyword or phrase per line.
 
-![Topics](docs/screenshots/05_topics.png)
+![Topics](05_topics.png)
 
 **6. People and universities (optional).** Add names you already know under "Always check these people". To search one university only, type its name, press **Find** and pick a match. Clear the box to go back to the whole country.
 
-![Watchlist and single university](docs/screenshots/06_watchlist_university.png)
+![Watchlist and single university](06_watchlist_university.png)
 
 **7. Run.** Progress and the latest status message appear in the bottom bar; the full log is under "Show log".
 
-![Running](docs/screenshots/07_running.png)
+![Running](07_running.png)
 
 **8. Read the results.** Top universities come first, each with its best-matching people and a score (100 = best match in this run).
 
-![Results](docs/screenshots/08_results.png)
+![Results](08_results.png)
 
 **9. Explore.** Sort and search the full table. Click a row to see the matching papers and a link to find the person's university page. Download everything as CSV.
 
-![Row details](docs/screenshots/09_details.png)
+![Row details](09_details.png)
 
 **10. Light or dark.** The toggle in the top-right corner switches theme; the choice is remembered.
 
-![Dark theme](docs/screenshots/10_dark_theme.png)
+![Dark theme](10_dark_theme.png)
 
-To regenerate these images and the video after changing the interface: `pip install playwright && playwright install chromium && python docs/capture.py`.
+The tutorial images, demo GIF and demo video are stored in the repository root alongside `README.md`.
 
 ## How it works
 
@@ -128,7 +128,6 @@ OpenAlex now expects an API key. Without one, the tiny daily allowance is shared
 - **Affiliation is per paper.** Recent movers have older papers under another country; use the watchlist for people you already know.
 - **Author profiles are algorithmic.** OpenAlex sometimes merges or splits similar names.
 - **Admissions and funding are not checked.** Check the PhD page or the specific call.
-- **Tested with simulated data** (headless browser, realistic scenarios), not against the live service in the build environment. If something breaks, please open an issue with the log lines.
 
 ## Not supported
 
@@ -142,7 +141,7 @@ OpenAlex now expects an API key. Without one, the tiny daily allowance is shared
 | `index.html` | The whole tool (HTML, CSS and JavaScript in one file) |
 | `README.md` | This file |
 | `LICENSE.txt` | MIT license |
-| `docs/` | Tutorial screenshots, demo GIF and video, and `capture.py` that regenerates them (uses simulated data) |
+| `demo.gif`, `demo.mp4`, `01_landing.png`–`10_dark_theme.png` | Tutorial media and screenshots (simulated data) |
 
 ## Contributing
 
